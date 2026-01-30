@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinky Cash Flow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎀 Financial Report 🎀</h1>
+
+    <form id="formKeuangan">
+      <input type="date" id="tanggal" required>
+      <input type="text" id="keterangan" placeholder="Nama Transaksi" required>
+      <select id="jenis">
+        <option value="Pemasukan">Pemasukan</option>
+        <option value="Pengeluaran">Pengeluaran</option>
+      </select>
+      <input type="number" id="jumlah" placeholder="Jumlah (Rp)" required>
+      <button type="submit">Tambah Data</button>
+    </form>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Keterangan</th>
+            <th>Jenis</th>
+            <th>Jumlah</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tabelData"></tbody>
+      </table>
+    </div>
+
+    <div class="saldo-container">
+      <small>Total Saldo Saat Ini:</small>
+      <h3 id="saldo">Rp 0</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
